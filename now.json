@@ -5,7 +5,7 @@
   "alias": "kms-www",
   "builds": [
     {
-      "src": "www/next.config.js", "use": "@now/next"
+      "src": "www/next.config.js", "use": "@now/next@0.0.79"
     },
     {
       "src": "blog/package.json", "use": "@now/static-build"
