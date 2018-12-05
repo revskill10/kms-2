@@ -5,7 +5,11 @@
   "alias": "kms-www",
   "builds": [
     {
-      "src": "www/next.config.js", "use": "@now/next@0.0.79"
+      "src": "www/next.config.js", 
+      "use": "@now/next@0.0.79",
+      "config": {
+        "maxLambdaSize": "10mb"
+      }
     },
     {
       "src": "blog/package.json", "use": "@now/static-build"
