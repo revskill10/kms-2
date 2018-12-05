@@ -1,11 +1,14 @@
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost'
-import fetch from 'cross-fetch/polyfill'
 
+let fetch = null
 let apolloClient = null
 
 // Polyfill fetch() on the server (used by apollo-client)
 if (!process.browser) {
+  fetch = require('node-fetch')
   global.fetch = fetch
+} else {
+  fetch = require('isomorphic-unfetch')
 }
 
 function create (initialState) {
