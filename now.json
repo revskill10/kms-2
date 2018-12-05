@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "name": "kms-www",
+  "public": true,
+  "alias": "kms-www",
+  "builds": [
+    {
+      "src": "www/next.config.js", "use": "@now/next"
+    },
+    {
+      "src": "blog/package.json", "use": "@now/static-build"
+    },
+    {
+      "src": "/www/_next/static/(.*)", "use": "@now/static"
+    },
+    {
+      "src": "/blog/_next/static/(.*)", "use": "@now/static"
+    },
+    { 
+      "src": "api/index.js", "use": "@now/node-server" 
+    }
+  ],
+  "routes": [
+    {
+      "src": "/about",
+      "dest": "www/about"
+    },
+    {
+      "src": "/",
+      "dest": "www/index"
+    },
+    {
+      "src": "/first-page",
+      "dest": "blog/hello-world/index.html"
+    },
+    {
+      "src": "/blog",
+      "dest": "blog/archives/index.html"
+    },
+    { "src": "/api/.*", "dest": "api/index.js" }
+  ]
+}
+

@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "name": "kms-www",
+  "public": true,
+  "alias": "kms-www",
+  "builds": [
+    {
+      "src": "www/next.config.js",
+      "use": "@now/next"
+    },
+    {
+      "src": "/www/_next/static/(.*)", "use": "@now/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/about",
+      "dest": "/www/about"
+    },
+    {
+      "src": "/",
+      "dest": "/www/index"
+    }    
+  ]
+}

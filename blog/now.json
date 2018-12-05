@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "name": "kms-www",
+  "public": true,
+  "alias": "kms-www",
+  "builds": [
+    {
+      "src": "www/next.config.js",
+      "use": "@now/next"
+    },
+    { "src": "blog/package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    {
+      "src": "/blog",
+      "dest": "/archives"
+    },
+    {
+      "src": "/first-page",
+      "dest": "/hello-world"
+    }
+  ]
+}

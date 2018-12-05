@@ -1,0 +1,8 @@
+www/.next
+blog/.next
+www/node_modules
+www/package-lock.json
+blog/node_modules
+blog/package-lock.json
+api/node_modules
+api/package-lock.json
