@@ -1,5 +1,5 @@
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost'
-import fetch from 'cross-fetch'
+import fetch from 'cross-fetch/polyfill'
 
 let apolloClient = null
 
