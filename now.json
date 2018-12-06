@@ -32,7 +32,7 @@
       "dest": "/blog/hello-world/index.html"
     },
     {
-      "src": "/blog",
+      "src": "/news",
       "dest": "/blog/archives/index.html"
     },
     {
