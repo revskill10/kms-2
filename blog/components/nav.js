@@ -4,20 +4,20 @@ const NavBar = () => (
   <nav>
     <ul>
       <li>
-        <a  href="/">
+        <Link href="/">
           Home
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="/about">
+        <Link href="/about">
           About
-        </a>
+        </Link>
       </li>
       <li>
-        <a href='/first-page'>First Blog post</a>
+        <Link href='/first-page'>First Blog post</Link>
       </li>
       <li>
-        <a href="/blog">Blog</a>
+        <Link href="/blog">Blog</Link>
       </li>
     </ul>
   </nav>
