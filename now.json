@@ -14,12 +14,6 @@
     {
       "src": "blog/package.json", "use": "@now/static-build"
     },
-    {
-      "src": "/www/_next/static/(.*)", "use": "@now/static"
-    },
-    {
-      "src": "/blog/_next/static/(.*)", "use": "@now/static"
-    },
     { 
       "src": "api/build/index.js", "use": "@now/node-server" 
     }
