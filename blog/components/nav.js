@@ -1,4 +1,4 @@
-import Link from './link'
+import Link from 'next/link'
 
 const NavBar = () => (
   <nav>
