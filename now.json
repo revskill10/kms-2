@@ -6,7 +6,7 @@
   "builds": [
     {
       "src": "www/next.config.js", 
-      "use": "@now/next@0.0.79",
+      "use": "@now/next",
       "config": {
         "maxLambdaSize": "10mb"
       }
@@ -21,21 +21,21 @@
   "routes": [
     {
       "src": "/about",
-      "dest": "www/about"
+      "dest": "/www/about"
     },
     {
       "src": "/",
-      "dest": "www/index"
+      "dest": "/www/index"
     },
     {
       "src": "/first-page",
-      "dest": "blog/hello-world/index.html"
+      "dest": "/blog/hello-world/index.html"
     },
     {
       "src": "/blog",
-      "dest": "blog/archives/index.html"
+      "dest": "/blog/archives/index.html"
     },
-    { "src": "/api/.*", "dest": "api/build/index.js" }
+    { "src": "/api/.*", "dest": "/api/build/index.js" }
   ]
 }
 
