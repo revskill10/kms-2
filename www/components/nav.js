@@ -4,17 +4,17 @@ const NavBar = () => (
   <nav>
     <ul>
       <li>
-        <Link href="/">
+        <Link href="/" as="/index">
           Home
         </Link>
       </li>
       <li>
-        <Link href="/about">
+        <Link href="/about" as="/about">
           About
         </Link>
       </li>
       <li>
-        <a href='/first-page' >First Blog post</a>
+        <a href='/first-page'>First Blog post</a>
       </li>
       <li>
         <a href="/blog">Blog</a>

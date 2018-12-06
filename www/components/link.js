@@ -6,8 +6,8 @@ import Link from 'next/link'
 const NextLink = ({href, className, as, children, ...rest}) => {
   //const as = getClientLink(href)
   return (
-    <Link href={href} as={href} {...rest}>
-      <a className={className} href={href}>{children}</a>
+    <Link href={href} as={as} {...rest}>
+      <a className={className} href={as}>{children}</a>
     </Link>
   )
 }
