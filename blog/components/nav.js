@@ -1,23 +1,23 @@
-import Link from 'next/link'
+import Link from './link'
 
 const NavBar = () => (
   <nav>
     <ul>
       <li>
-        <a href="/">
+        <Link href="/">
           Home
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="/about">
+        <Link href="/about">
           About
-        </a>
+        </Link>
       </li>
       <li>
-        <Link as='/first-page' href="/blog/hello-world/index.html">First Blog post</Link>
+        <Link href='/first-page'>First Blog post</Link>
       </li>
       <li>
-        <Link as="/blog" href="/blog/archives/index.html">Blog</Link>
+        <Link href="/blog">Blog</Link>
       </li>
     </ul>
   </nav>

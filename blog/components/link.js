@@ -1,13 +1,13 @@
 import Link from 'next/link'
-//import mkLink from 'next-routes-middleware/get-client-link'
-//import config from '../now.json'
-//const getClientLink = mkLink(config)
+import mkLink from 'next-routes-middleware/get-client-link'
+import config from '../routes.json'
+const getClientLink = mkLink(config)
 
-const NextLink = ({href, className, as, children, ...rest}) => {
-  //const as = getClientLink(href)
+const NextLink = ({href, className, children, ...rest}) => {
+  const as = getClientLink(href)
   return (
-    <Link href={href} as={href} {...rest}>
-      <a className={className} href={href}>{children}</a>
+    <Link href={as} as={href} {...rest}>
+      <a className={className} href={as}>{children}</a>
     </Link>
   )
 }

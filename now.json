@@ -46,4 +46,3 @@
     { "src": "/api/.*", "dest": "/api/build/index.js" }
   ]
 }
-
