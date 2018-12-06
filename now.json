@@ -12,7 +12,7 @@
       }
     },
     {
-      "src": "blog/package.json", "use": "@now/static-build"
+      "src": "blog/next.config.js", "use": "@now/next"
     },
     { 
       "src": "api/build/index.js", "use": "@now/node-server" 
@@ -29,19 +29,19 @@
     },
     {
       "src": "/first-page",
-      "dest": "/blog/hello-world/index.html"
+      "dest": "/blog/hello-world"
     },
     {
       "src": "/news",
-      "dest": "/blog/archives/index.html"
+      "dest": "/blog/archives"
     },
     {
-      "src": "/www/(.*)",
-      "dest": "/www/$1"
+      "src": "/www/_next/(.*)",
+      "dest": "/www/_next/$1"
     },
     {
-      "src": "/blog/(.*)",
-      "dest": "/blog/$1"
+      "src": "/blog/_next/(.*)",
+      "dest": "/blog/_next/$1"
     },
     { "src": "/api/.*", "dest": "/api/build/index.js" }
   ]
