@@ -21,7 +21,7 @@
       "src": "/blog/_next/static/(.*)", "use": "@now/static"
     },
     { 
-      "src": "api/dist/index.js", "use": "@now/node-server" 
+      "src": "api/build/index.js", "use": "@now/node-server" 
     }
   ],
   "routes": [
@@ -41,7 +41,7 @@
       "src": "/blog",
       "dest": "blog/archives/index.html"
     },
-    { "src": "/api/.*", "dest": "api/dist/index.js" }
+    { "src": "/api/.*", "dest": "api/build/index.js" }
   ]
 }
 
