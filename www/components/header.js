@@ -9,12 +9,12 @@ const Header = ({ router: { pathname } }) => (
     <Link prefetch={pathname !== '/about'} href='/about' className={pathname === '/about' ? 'is-active' : ''}>
       About
     </Link>
-    <a href='/hello-world' className={pathname === '/first-page' ? 'is-active' : ''}>
+    <Link href='/hello-world' className={pathname === '/first-page' ? 'is-active' : ''}>
       First Page
-    </a>
-    <a href='/archives' className={pathname === '/archives' ? 'is-active' : ''}>
+    </Link>
+    <Link href='/archives' className={pathname === '/archives' ? 'is-active' : ''}>
       News
-    </a>
+    </Link>
     <style jsx>{`
       header {
         margin-bottom: 25px;
