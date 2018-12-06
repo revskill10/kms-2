@@ -20,19 +20,19 @@
   ],
   "routes": [
     {
-      "src": "/about",
-      "dest": "/www/about"
+      "src": "/",
+      "dest": "www/index"
     },
     {
-      "src": "/",
-      "dest": "/www/index"
+      "src": "/about",
+      "dest": "www/about"
     },
     {
       "src": "/first-page",
-      "dest": "b/log/hello-world"
+      "dest": "blog/first-page"
     },
     {
-      "src": "/news",
+      "src": "/archives",
       "dest": "/blog/archives"
     },
     { "src": "/api/.*", "dest": "/api/build/index.js" }
