@@ -21,15 +21,15 @@
   "routes": [
     {
       "src": "/",
-      "dest": "www/index"
+      "dest": "/www/index"
     },
     {
       "src": "/about",
-      "dest": "www/about"
+      "dest": "/www/about"
     },
     {
       "src": "/first-page",
-      "dest": "blog/first-page"
+      "dest": "/blog/first-page"
     },
     {
       "src": "/archives",
