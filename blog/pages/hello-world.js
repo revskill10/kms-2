@@ -6,7 +6,6 @@ class AboutPage extends Component {
   render() {
     return (
       <main>
-        <Header />
         <section>
           <Nav />
         </section>

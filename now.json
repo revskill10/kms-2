@@ -16,24 +16,48 @@
     },
     { 
       "src": "api/build/index.js", "use": "@now/node-server" 
-    }
+    },
+    {
+      "src": "/static/*", "use": "@now/static"
+    },
+    {
+      "src": "www/_next/*", "use": "@now/static"
+    },
+    {
+      "src": "blog/_next/*", "use": "@now/static"
+    },
+    { "src": "home/package.json", "use": "@now/static-build" }
   ],
   "routes": [
+    { "src": "/favicon.ico", "dest": "/static/favicon.ico" },
+    { "src": "/robots.txt", "dest": "/static/robots.txt" },
     {
       "src": "/",
-      "dest": "/www/index"
+      "dest": "/home/index.html"
     },
     {
       "src": "/about",
       "dest": "/www/about"
     },
     {
-      "src": "/first-page",
-      "dest": "/blog/first-page"
+      "src": "/hello-world",
+      "dest": "/blog/hello-world"
     },
     {
       "src": "/archives",
       "dest": "/blog/archives"
+    },
+    {
+      "src": "/_next/(.*)",
+      "dest": "www/_next/$1"
+    },
+    {
+      "src": "/blog/_next/(.*)",
+      "dest": "blog/_next/$1"
+    },
+    {
+      "src": "/home/_next/(.*)",
+      "dest": "home/_next/$1"
     },
     { "src": "/api/.*", "dest": "/api/build/index.js" }
   ]

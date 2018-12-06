@@ -1,20 +1,18 @@
-import Link from 'next/link'
 import { withRouter } from 'next/router'
 
-const Header = ({ router: { pathname } }) => (
+const goto = (as) => e => {
+  e.preventDefault()
+  setTimeout(() => window.location.href = as, 100)
+}
+
+const Header = ({ router }) => {
+  const { pathname } = router
+  return (
   <header>
-    <Link href='/' passHref>
-      <a href='/' className={pathname === '/' ? 'is-active' : ''}>Home</a>
-    </Link>
-    <Link href='/about' passHref>
-      <a href='/about' className={pathname === '/about' ? 'is-active' : ''}>About</a>
-    </Link>
-    <Link href='/first-page' passHref>
-      <a href='/first-page' className={pathname === '/first-page' ? 'is-active' : ''}>First Page</a>
-    </Link>
-    <Link href='/archives' passHref>
-      <a href='/archives' className={pathname === '/archives' ? 'is-active' : ''}>News</a>
-    </Link>
+    <a href='/' onClick={goto('/')} className={pathname === '/' ? 'is-active' : ''}>Home</a>
+    <a href='/about' onClick={goto('/about')}  href='/about' className={pathname === '/about' ? 'is-active' : ''}>About</a>
+    <a href='/hello-world' onClick={goto('/hello-world')} className={pathname === '/hello-world' ? 'is-active' : ''}>Hello world</a>
+    <a href='/archives' onClick={goto('/archives')} className={pathname === '/archives' ? 'is-active' : ''}>News</a>
     <style jsx>{`
       header {
         margin-bottom: 25px;
@@ -23,12 +21,13 @@ const Header = ({ router: { pathname } }) => (
         font-size: 14px;
         margin-right: 15px;
         text-decoration: none;
+        hover: cursor;
       }
       .is-active {
         text-decoration: underline;
       }
     `}</style>
   </header>
-)
+)}
 
 export default withRouter(Header)

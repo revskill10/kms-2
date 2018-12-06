@@ -1,5 +1,5 @@
 module.exports = {
-  //assetPrefix: '/www',
+  assetPrefix: '/home',
   webpack: config => {
     // Fixes npm packages that depend on `fs` module
     config.node = {
@@ -13,7 +13,7 @@ module.exports = {
         type: "javascript/auto",
       },
     )
-    config.output.publicPath = `/www${config.output.publicPath}`;
+    config.output.publicPath = `/home${config.output.publicPath}`;
 
     return config
   }
