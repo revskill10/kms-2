@@ -1,5 +1,5 @@
 module.exports = {
-  useFileSystemPublicRoutes: false,
+  //useFileSystemPublicRoutes: false,
   assetPrefix: '/www', // affects page bundles and app/commons/vendor scripts
   webpack: config => {
     // Fixes npm packages that depend on `fs` module
