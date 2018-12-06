@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "name": "kms-www",
+  "name": "kms-main",
   "public": true,
-  "alias": "kms-www",
+  "alias": "kms-main",
   "builds": [
     {
       "src": "www/next.config.js", 
@@ -21,27 +21,19 @@
   "routes": [
     {
       "src": "/",
-      "dest": "www/index"
+      "dest": "/www/index"
     },
     {
       "src": "/about",
-      "dest": "www/about"
+      "dest": "/www/about"
     },
     {
       "src": "/first-page",
-      "dest": "blog/first-page"
+      "dest": "/blog/first-page"
     },
     {
       "src": "/archives",
-      "dest": "blog/archives"
-    },
-    {
-      "src": "/www/(.*)",
-      "dest": "/www/$1"
-    },
-    {
-      "src": "/blog/(.*)",
-      "dest": "/blog/$1"
+      "dest": "/blog/archives"
     },
     { "src": "/api/.*", "dest": "/api/build/index.js" }
   ]

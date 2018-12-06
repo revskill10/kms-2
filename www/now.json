@@ -1,4 +1,6 @@
 {
+  "alias": "www",
+  "name": "www",
   "routes": [
     {
       "src": "/about",

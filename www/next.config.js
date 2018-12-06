@@ -1,6 +1,8 @@
+const { NOW_URL } = process.env
+const { alias } = require('./now.json')
 module.exports = {
   //useFileSystemPublicRoutes: false,
-  //assetPrefix: '/www', // affects page bundles and app/commons/vendor scripts
+  assetPrefix: NOW_URL ? `https://${alias}` : 'http://localhost:3000',
   webpack: config => {
     // Fixes npm packages that depend on `fs` module
     config.node = {
@@ -14,7 +16,6 @@ module.exports = {
         type: "javascript/auto",
       },
     )
-    config.output.publicPath = `/www${config.output.publicPath}`;
 
     return config
   }

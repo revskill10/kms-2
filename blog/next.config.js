@@ -1,8 +1,6 @@
+const { NOW_URL } = process.env
+const { alias } = require('./now.json')
 module.exports = {
   //useFileSystemPublicRoutes: false,
-  //assetPrefix: '/blog', // affects page bundles and app/commons/vendor scripts
-  webpack: (config) => {
-    config.output.publicPath = `/blog${config.output.publicPath}`;
-    return config;
-  },
+  assetPrefix: NOW_URL ? `https://${alias}` : 'http://localhost:3000',  
 };

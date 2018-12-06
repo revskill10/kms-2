@@ -1,15 +1,21 @@
-import Link from 'next/link'
-import mkLink from 'next-routes-middleware/get-client-link'
-import config from '../routes.json'
-const getClientLink = mkLink(config)
+import React from 'react'
+import { withRouter } from 'next/router'
 
-const NextLink = ({href, className, children, ...rest}) => {
-  const as = getClientLink(href)
-  return (
-    <Link href={as} as={href} {...rest}>
-      <a className={className} href={as}>{children}</a>
-    </Link>
-  )
+class MyLink extends React.Component {
+  componentDidMount() {
+    const { router, link } = this.props
+    router.prefetch(link)
+  }
+
+  render() {
+    const { router, children } = this.props
+
+    return (
+      <a onClick={() => setTimeout(() => router.push(link), 100)}>
+        {children}
+      </a>
+    )
+  }
 }
 
-export default NextLink
+export default withRouter(MyLink)

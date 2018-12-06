@@ -3,17 +3,17 @@ import { withRouter } from 'next/router'
 
 const Header = ({ router: { pathname } }) => (
   <header>
-    <Link href='www/index' as='/' className={pathname === '/' ? 'is-active' : ''}>
-      Home
+    <Link href='/' passHref>
+      <a href='/' className={pathname === '/' ? 'is-active' : ''}>Home</a>
     </Link>
-    <Link as='/about' href='www/about' className={pathname === '/about' ? 'is-active' : ''}>
-      About
+    <Link href='/about' passHref>
+      <a href='/about' className={pathname === '/about' ? 'is-active' : ''}>About</a>
     </Link>
-    <Link as='/hello-world' href='blog/hello-world' className={pathname === '/first-page' ? 'is-active' : ''}>
-      First Page
+    <Link href='/first-page' passHref>
+      <a href='/first-page' className={pathname === '/first-page' ? 'is-active' : ''}>First Page</a>
     </Link>
-    <Link as='/archives' href='blog/archives' className={pathname === '/archives' ? 'is-active' : ''}>
-      News
+    <Link href='/archives' passHref>
+      <a href='/archives' className={pathname === '/archives' ? 'is-active' : ''}>News</a>
     </Link>
     <style jsx>{`
       header {

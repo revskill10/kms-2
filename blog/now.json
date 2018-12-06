@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "name": "kms-www",
+  "name": "blog",
   "public": true,
-  "alias": "kms-www",
+  "alias": "blog",
   "builds": [
     {
       "src": "www/next.config.js",
