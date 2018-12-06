@@ -13,6 +13,7 @@ module.exports = {
         type: "javascript/auto",
       },
     )
+    config.output.publicPath = `/assets${config.output.publicPath}`;
 
     return config
   }
