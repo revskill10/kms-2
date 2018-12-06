@@ -14,7 +14,7 @@ module.exports = {
         type: "javascript/auto",
       },
     )
-    //config.output.publicPath = `/www${config.output.publicPath}`;
+    config.output.publicPath = `/www${config.output.publicPath}`;
 
     return config
   }
