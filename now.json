@@ -35,14 +35,6 @@
       "src": "/news",
       "dest": "/blog/archives"
     },
-    {
-      "src": "/www/_next/(.*)",
-      "dest": "/www/_next/$1"
-    },
-    {
-      "src": "/blog/_next/(.*)",
-      "dest": "/blog/_next/$1"
-    },
     { "src": "/api/.*", "dest": "/api/build/index.js" }
   ]
 }
