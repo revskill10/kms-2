@@ -13,6 +13,8 @@ const Header = ({ router }) => {
     <a href='/about' onClick={goto('/about')}  href='/about' className={pathname === '/about' ? 'is-active' : ''}>About</a>
     <a href='/hello-world' onClick={goto('/hello-world')} className={pathname === '/hello-world' ? 'is-active' : ''}>Hello world</a>
     <a href='/archives' onClick={goto('/archives')} className={pathname === '/archives' ? 'is-active' : ''}>News</a>
+    <a href='/slides/lesson1'>Lesson 1</a>
+    <a href='/slides/lesson2'>Lesson 1</a>
     <style jsx>{`
       header {
         margin-bottom: 25px;
