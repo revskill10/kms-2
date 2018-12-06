@@ -4,12 +4,12 @@ const NavBar = () => (
   <nav>
     <ul>
       <li>
-        <Link prefetch href="/">
+        <Link href="/">
           Home
         </Link>
       </li>
       <li>
-        <Link prefetch href="/about">
+        <Link href="/about">
           About
         </Link>
       </li>

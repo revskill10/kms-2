@@ -14,10 +14,10 @@ const NavBar = () => (
         </a>
       </li>
       <li>
-        <Link as='/first-page' href="blog/hello-world/index.html">First Blog post</Link>
+        <Link as='/first-page' href="/blog/hello-world/index.html">First Blog post</Link>
       </li>
       <li>
-        <Link as="/blog" href="blog/archives/index.html">Blog</Link>
+        <Link as="/blog" href="/blog/archives/index.html">Blog</Link>
       </li>
     </ul>
   </nav>
