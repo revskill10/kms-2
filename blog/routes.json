@@ -1,14 +1,6 @@
 {
   "routes": [
     {
-      "src": "/about",
-      "dest": "/www/about"
-    },
-    {
-      "src": "/",
-      "dest": "/www/index"
-    },
-    {
       "src": "/first-page",
       "dest": "/blog/hello-world"
     },

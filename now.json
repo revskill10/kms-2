@@ -29,7 +29,7 @@
     },
     {
       "src": "/first-page",
-      "dest": "/blog/hello-world"
+      "dest": "b/log/hello-world"
     },
     {
       "src": "/news",
