@@ -4,7 +4,7 @@ const NavBar = () => (
   <nav>
     <ul>
       <li>
-        <Link href="/" as="/index">
+        <Link href="/index" as="/">
           Home
         </Link>
       </li>
