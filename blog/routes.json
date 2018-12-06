@@ -1,19 +1,11 @@
 {
   "routes": [
-  {
-    "src": "/about",
-    "dest": "www/about"
-  },
-  {
-    "src": "/",
-    "dest": "www/index"
-  },
-  {
-    "src": "/first-page",
-    "dest": "blog/hello-world/index.html"
-  },
-  {
-    "src": "/news",
-    "dest": "blog/archives/index.html"
+    {
+      "src": "/first-page",
+      "dest": "blog/hello-world/index.html"
+    },
+    {
+      "src": "/news",
+      "dest": "blog/archives/index.html"
   }]
 }

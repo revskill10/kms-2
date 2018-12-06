@@ -21,26 +21,26 @@
   "routes": [
     {
       "src": "/about",
-      "dest": "www/about"
+      "dest": "/www/about"
     },
     {
       "src": "/",
-      "dest": "www/index"
+      "dest": "/www/index"
     },
     {
       "src": "/first-page",
-      "dest": "blog/hello-world/index.html"
+      "dest": "/blog/hello-world/index.html"
     },
     {
       "src": "/news",
-      "dest": "blog/archives/index.html"
+      "dest": "/blog/archives/index.html"
     },
     {
-      "src": "^/www/(.*)",
+      "src": "/www/(.*)",
       "dest": "/www/$1"
     },
     {
-      "src": "^/blog/(.*)",
+      "src": "/blog/(.*)",
       "dest": "/blog/$1"
     },
     { "src": "/api/.*", "dest": "/api/build/index.js" }
