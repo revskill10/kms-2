@@ -17,7 +17,7 @@ const NavBar = () => (
         <Link href='/first-page'>First Blog post</Link>
       </li>
       <li>
-        <Link href="/blog">Blog</Link>
+        <Link href="/news">Blog</Link>
       </li>
     </ul>
   </nav>
