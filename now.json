@@ -35,6 +35,14 @@
       "src": "/blog",
       "dest": "/blog/archives/index.html"
     },
+    {
+      "src": "/www/(.*)",
+      "dest": "/www/$1"
+    },
+    {
+      "src": "/blog/(.*)",
+      "dest": "/blog/$1"
+    },
     { "src": "/api/.*", "dest": "/api/build/index.js" }
   ]
 }
