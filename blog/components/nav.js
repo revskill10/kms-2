@@ -1,18 +1,18 @@
-import Link from './link'
+import Link from 'next/link'
 import { withRouter } from 'next/router'
 
 const Header = ({ router: { pathname } }) => (
   <header>
-    <Link prefetch href='/' className={pathname === '/' ? 'is-active' : ''}>
+    <Link href='/' className={pathname === '/' ? 'is-active' : ''}>
       Home
     </Link>
-    <Link prefetch href='/about' className={pathname === '/about' ? 'is-active' : ''}>
+    <Link href='/about' className={pathname === '/about' ? 'is-active' : ''}>
       About
     </Link>
-    <Link prefetch href='/first-page' className={pathname === '/first-page' ? 'is-active' : ''}>
+    <Link prefetch={pathname !== '/first-page'} href='/first-page' className={pathname === '/first-page' ? 'is-active' : ''}>
       First Page
     </Link>
-    <Link prefetch href='/news' className={pathname === '/news' ? 'is-active' : ''}>
+    <Link prefetch={pathname !== '/news'} href='/news' className={pathname === '/news' ? 'is-active' : ''}>
       News
     </Link>
     <style jsx>{`
