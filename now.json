@@ -29,7 +29,8 @@
     { "src": "home/package.json", "use": "@now/static-build" },
     { "src": "slides/lesson1/index.mdx", "use": "@now/mdx-deck" },
     { "src": "slides/lesson2/index.mdx", "use": "@now/mdx-deck" },
-    { "src": "slides/lesson3/package.json", "use": "@now/static-build" }
+    { "src": "slides/lesson3/package.json", "use": "@now/static-build" },
+    { "src": "news/package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
   ],
   "routes": [
     { "src": "/favicon.ico", "dest": "/static/favicon.ico" },
@@ -37,6 +38,12 @@
     { "src": "slides/lesson1", "dest": "/slides/lesson1/index.html"},
     { "src": "slides/lesson2", "dest": "/slides/lesson2/index.html"},
     { "src": "slides/lesson3", "dest": "/slides/lesson3/dist/index.html"},
+    {
+      "src": "/news", "dest": "/news/public/index.html"
+    },
+    {
+      "src": "/page-2", "dest": "/news/public/page-2/index.html"
+    },    
     {
       "src": "/",
       "dest": "/home/index.html"
