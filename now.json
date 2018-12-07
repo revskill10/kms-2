@@ -20,12 +20,6 @@
     {
       "src": "/static/*", "use": "@now/static"
     },
-    {
-      "src": "www/_next/*", "use": "@now/static"
-    },
-    {
-      "src": "blog/_next/*", "use": "@now/static"
-    },
     { "src": "home/package.json", "use": "@now/static-build" },
     { "src": "slides/lesson1/index.mdx", "use": "@now/mdx-deck" },
     { "src": "slides/lesson2/index.mdx", "use": "@now/mdx-deck" },
@@ -62,14 +56,17 @@
     },
     {
       "src": "/_next/(.*)",
+      "headers": {"cache-control": "s-maxage=0"},
       "dest": "www/_next/$1"
     },
     {
       "src": "/blog/_next/(.*)",
+      "headers": {"cache-control": "s-maxage=0"},
       "dest": "blog/_next/$1"
     },
     {
       "src": "/home/_next/(.*)",
+      "headers": {"cache-control": "s-maxage=0"},
       "dest": "home/_next/$1"
     },
     { "src": "/api/.*", "dest": "/api/build/index.js" }

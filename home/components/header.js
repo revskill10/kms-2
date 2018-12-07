@@ -1,36 +1,16 @@
-import { withRouter } from 'next/router'
+import Link from './link'
 
-const goto = (as) => e => {
-  e.preventDefault()
-  setTimeout(() => window.location.href = as, 100)
-}
-
-const Header = ({ router }) => {
-  const { pathname } = router
+const Header = () => {
   return (
   <header>
-    <a href='/' onClick={goto('/')} className={pathname === '/' ? 'is-active' : ''}>Home</a>
-    <a href='/about' onClick={goto('/about')}  href='/about' className={pathname === '/about' ? 'is-active' : ''}>About</a>
-    <a href='/hello-world' onClick={goto('/hello-world')} className={pathname === '/hello-world' ? 'is-active' : ''}>Hello world</a>
-    <a href='/archives' onClick={goto('/archives')} className={pathname === '/archives' ? 'is-active' : ''}>News</a>
-    <a href='/slides/lesson1'>Lesson 1</a>
-    <a href='/slides/lesson2'>Lesson 1</a>
-    <a href='/slides/lesson3'>Lesson 3</a>
-    <style jsx>{`
-      header {
-        margin-bottom: 25px;
-      }
-      a {
-        font-size: 14px;
-        margin-right: 15px;
-        text-decoration: none;
-        hover: cursor;
-      }
-      .is-active {
-        text-decoration: underline;
-      }
-    `}</style>
+    <Link href={'/'} local>Home</Link>
+    <Link href={'/about'}>About</Link>
+    <Link href={'/hello-world'}>Hello World</Link>
+    <Link href={'/archives'}>Archives</Link>
+    <Link href={'/slides/lesson1'}>Lesson 1</Link>
+    <Link href={'/slides/lesson2'}>Lesson 2</Link>
+    <Link href={'/slides/lesson3'}>Lesson 3</Link>
   </header>
 )}
 
-export default withRouter(Header)
+export default Header

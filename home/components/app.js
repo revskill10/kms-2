@@ -1,3 +1,5 @@
+import '../asserts/styles.less'
+
 export default ({ children }) => (
     <main>
       {children}
