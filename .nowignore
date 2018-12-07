@@ -8,3 +8,5 @@ api/node_modules
 api/package-lock.json
 calendar
 home/.next
+home/dist
+slides/lesson3/dist
