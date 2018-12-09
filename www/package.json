@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo-boost": "^0.1.22",
-    "cross-fetch": "^2.2.3",
+    "cross-fetch": "^3.0.0",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
     "isomorphic-fetch": "^2.2.1",
