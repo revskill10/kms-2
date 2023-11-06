@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^7.0.2",
+    "next": "^14.0.0",
     "next-routes-middleware": "^3.4.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
